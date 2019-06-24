@@ -1,5 +1,6 @@
 import test from './presets/test.json';
 import kovan from './presets/kovan.json';
+import rinkeby from './presets/rinkeby.json';
 import http from './presets/http.json';
 import ws from './presets/ws.json';
 import mainnet from './presets/mainnet.json';
@@ -52,6 +53,9 @@ function loadPreset(name) {
       break;
     case 'kovan':
       preset = kovan;
+      break;
+    case 'rinkeby':
+      preset = rinkeby;
       break;
     case 'mainnet':
       preset = mainnet;

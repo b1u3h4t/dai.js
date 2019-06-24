@@ -3,6 +3,7 @@ import assert from 'assert';
 
 const MAINNET_SERVER_URL = 'https://sai-mainnet.makerfoundation.com/v1';
 const KOVAN_SERVER_URL = 'https://sai-kovan.makerfoundation.com/v1';
+const RINKEBY_SERVER_URL = 'http://localhost:5000/v1';
 
 export async function getQueryResponse(serverUrl, query, variables) {
   const resp = await fetch(serverUrl, {
@@ -29,6 +30,10 @@ export default class QueryApi {
       case 1:
         this.serverUrl = MAINNET_SERVER_URL;
         break;
+      case 'rinkeby':
+      case 4:
+          this.serverUrl = RINKEBY_SERVER_URL;
+          break;
       case 'kovan':
       case 42:
         this.serverUrl = KOVAN_SERVER_URL;

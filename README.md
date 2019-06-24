@@ -81,7 +81,7 @@ There are also automated tests that send transactions through either the Kovan t
 
 `export PRIVATE_KEY="0x..."`
 
-Then, use either `yarn test:kovan` or `yarn test:mainnet` to run the tests.
+Then, use either `yarn test:kovan` or `yarn test:rinkeby` or `yarn test:mainnet` to run the tests.
 
 Since these networks run much more slowly than Ganache, you might want to set the debug environment variable (in order to see some relevant output along the way):
 
@@ -103,6 +103,7 @@ If you have deployed contract code changes to the testchain, run `scripts/instal
 - `yarn test:watch` - start a test chain and run all tests in watch mode
 - `yarn test:net` - just start a test chain
 - `yarn test:kovan` - run integration tests on Kovan
+- `yarn test:rinkeby` - run integration tests on Rinkeby
 - `yarn test:mainnet` - run integration tests on mainnet
 - `yarn test:integration` - run integration tests on Ganache
 

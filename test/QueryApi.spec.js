@@ -7,3 +7,12 @@ test('getCdpIdsForOwner on kovan', async () => {
   );
   expect(ids).toEqual([4756]);
 });
+
+
+test('getCdpIdsForOwner on rinkeby', async () => {
+  const q = new QueryApi('rinkeby');
+  const ids = await q.getCdpIdsForOwner(
+    '0x90d01F84F8Db06d9aF09054Fe06fb69C1f8ee9E9'
+  );
+  expect(ids).toEqual([4756]);
+});

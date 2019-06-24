@@ -15,6 +15,16 @@ export const kovanProviderConfig = {
     }
   }
 };
+export const rinkebyProviderConfig = {
+  web3: {
+    privateKey: process.env.RINKEBY_PRIVATE_KEY,
+    provider: {
+      type: ProviderType.INFURA,
+      network: 'rinkeby',
+      infuraProjectId
+    }
+  }
+};
 export const websocketProviderConfig = {
   web3: {
     provider: {

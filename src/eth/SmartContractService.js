@@ -124,6 +124,7 @@ export default class SmartContractService extends PrivateService {
         [TESTNET_ID]: 'testnet',
         [1337]: 'testnet',
         [42]: 'kovan',
+        [4]: 'rinkeby',
         [1]: 'mainnet'
       }[id];
 

@@ -258,6 +258,17 @@ test('have ETH in test account', done => {
     });
 });
 
+test('connect to rinkeby', async () => {
+  const service = buildInfuraService('rinkeby');
+  try {
+    await service.manager().connect();
+  } catch (err) {
+    console.log(err);
+  }
+  expect(service.manager().isConnected()).toBe(true);
+  expect(service.networkId()).toBe(4);
+});
+
 test('connect to kovan', async () => {
   const service = buildInfuraService('kovan');
   try {

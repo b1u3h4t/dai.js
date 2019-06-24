@@ -8,3 +8,14 @@ test('use Kovan via Infura without project id throws', async () => {
     expect(err).toBeInstanceOf(Error);
   }
 });
+
+
+test('use rinkeby via Infura without project id throws', async () => {
+  try {
+    const maker = await Maker.create('rinkeby', { log: false });
+    await maker.authenticate();
+  } catch (err) {
+    expect(err).toBeInstanceOf(Error);
+  }
+});
+

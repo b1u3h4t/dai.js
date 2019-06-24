@@ -67,6 +67,7 @@ test('parameterized smart contract input with multiple addresses', async () => {
   const mockContractDefinition = {
     address: {
       testnet: '0xbeefed1bedded2dabbed3defaced4decade5dead',
+      rinkeby: '0xbeefed1bedded2dabbed3defaced4decade5caca',
       kovan: '0xbeefed1bedded2dabbed3defaced4decade5caca',
       mainnet: '0xbeefed1bedded2dabbed3defaced4decade5feed'
     },

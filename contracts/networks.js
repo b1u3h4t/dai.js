@@ -3,6 +3,7 @@ import contracts from './contracts';
 import * as abis from './abis';
 import kovanAddresses from './addresses/kovan.json';
 import mainnetAddresses from './addresses/mainnet.json';
+import rinkebyAddresses from './addresses/rinkeby.json';
 
 export function contractInfo(network) {
   let addresses;
@@ -12,6 +13,9 @@ export function contractInfo(network) {
       break;
     case 'kovan':
       addresses = kovanAddresses;
+      break;
+    case 'rinkeby':
+      addresses = rinkebyAddresses;
       break;
     case 'test':
       // we "require just in time" here because a non-developer user will not
@@ -147,7 +151,7 @@ export default [
   { name: 'mainnet', networkId: 1, contracts: contractInfo('mainnet') },
   { name: 'morden', networkId: 2, contracts: null },
   { name: 'ropsten', networkId: 3, contracts: null },
-  { name: 'rinkeby', networkId: 4, contracts: null },
+  { name: 'rinkeby', networkId: 4, contracts: contractInfo('rinkeby') },
   { name: 'kovan', networkId: 42, contracts: contractInfo('kovan') },
   { name: 'test', networkId: 1337, contracts: contractInfo('test') },
   { name: 'test', networkId: TESTNET_ID, contracts: contractInfo('test') }
